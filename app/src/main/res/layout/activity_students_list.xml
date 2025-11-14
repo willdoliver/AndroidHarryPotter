@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentsListActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="Listagem de alunos por casa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupHouses"
+        android:layout_width="363dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radioButtonGryffindor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gryffindor" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSlytherin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slytherin" />
+
+        <RadioButton
+            android:id="@+id/radioButtonHufflepuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hufflepuff" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRavenclaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ravenclaw" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSearchByHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Buscar Alunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupHouses" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupHouses">
+
+        <TextView
+            android:id="@+id/textViewResultStudents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:textSize="16sp"
+            tools:text="O resultado aparecerá aqui" />
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarStudents"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupHouses"
+        tools:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>
