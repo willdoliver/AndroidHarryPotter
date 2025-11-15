@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val buttonListSpecificChar = findViewById<Button>(R.id.buttonListSpecificChar)
         val buttonListTeachers = findViewById<Button>(R.id.buttonListTeachers)
         val buttonListStudents = findViewById<Button>(R.id.buttonListStudents)
+        val buttonListStudentsByName = findViewById<Button>(R.id.buttonListStudentsByName)
 
         buttonListSpecificChar.setOnClickListener {
             val intent = Intent(this, StudentActivity::class.java)
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonListStudents.setOnClickListener {
             val intent = Intent(this, StudentsListActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonListStudentsByName.setOnClickListener {
+            val intent = Intent(this, StudentsListByNameActivity::class.java)
             startActivity(intent)
         }
 
